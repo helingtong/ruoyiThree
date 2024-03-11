@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <th:block th:include="include :: header('值域注册')" />
+</head>
+
+
+<body class="white-bg">
+<div class="main-content">
+    <form id="form-user-add" class="form-horizontal">
+        <input name="deptId" type="hidden" id="treeId"/>
+        <h3 align="center">值域注册</h3>
+        <h4 class="form-header h4">第一步：注册值域基本信息</h4>
+        <div class="row" >
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">中文名称：</label>
+                    <div class="col-sm-7">
+                        <input value="井类别" placeholder="请输入名称" class="form-control" type="text" maxlength="30" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">英文名称:</label>
+                    <div class="col-sm-7">
+                        <input value="well_classification" placeholder="请输入同义名称" class="form-control" type="text" maxlength="30" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">值域标识符：</label>
+                    <div class="col-sm-7">
+                        <input value="PC_DQ_VD_4_4.1.2" placeholder="请输入同义名称" class="form-control" type="text" maxlength="30" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">值域类型：</label>
+                    <div class="col-sm-7">
+                        <select class="form-control" name="">
+                            <option>可枚举型</option>
+                            <option>描述型</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">值域语境：</label>
+                    <div class="col-sm-7">
+                        <select class="form-control" name="">
+                            <option>petroleum</option>
+                            <option>org</option>
+                            <option>owl</option>
+                            <option>time</option>
+                            <option>PIDD</option>
+                            <option>rdf</option>
+                            <option>dct</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">维度：</label>
+                    <div class="col-sm-7">
+                        <input value="类别" placeholder="请输入同义名称" class="form-control" type="text" maxlength="30" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">度量单位：</label>
+                    <div class="col-sm-7">
+                        <input value="不适用" placeholder="请输入同义名称" class="form-control" type="text" maxlength="30" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">精度：</label>
+                    <div class="col-sm-7">
+                        <input value="0" placeholder="请输入同义名称" class="form-control" type="text" maxlength="30" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">对应概念域的ID：</label>
+                    <div class="col-sm-7">
+                        <input value="PC_DQ_CD_3_3.1.2"  class="form-control" type="text" maxlength="30" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">格式：</label>
+                    <div class="col-sm-7">
+                        <select class="form-control" name="">
+                            <option>%s</option>
+                            <option>/</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">最少字符数：</label>
+                    <div class="col-sm-7">
+                        <input value="1" class="form-control" type="text" maxlength="30" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">最多字符数：</label>
+                    <div class="col-sm-7">
+                        <input value="80" class="form-control" type="text" maxlength="30" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class="col-xs-2 control-label">定义：</label>
+                    <div class="col-xs-8">
+                        <textarea name="remark" maxlength="200" class="form-control" cols="30" rows="2">根据井的不同特征或属性为划分标准进行划分得到的分类结果。</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class="col-xs-2 control-label">描述：</label>
+                    <div class="col-xs-8">
+                        <textarea name="remark" maxlength="200" class="form-control" cols="30" rows="2">监管机构按照井的意图进行分类的指标，例如：按照勘探开发的流程来划分有：钻井、录井、测井、固井、完井等；按照井眼形状分有垂直井、斜井、水平井等；具体的"井类别"定义取决于上下文和特定领域的应用。</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="form-header h4">第二步：注册允许值</h4>
+        <div class="row" >
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">数据类型：</label>
+                    <div class="col-sm-7">
+                        <input value="数值" placeholder="请输入名称" class="form-control" type="text" maxlength="30" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">表示形式：</label>
+                    <div class="col-sm-7">
+                        <input value="N" placeholder="请输入同义名称" class="form-control" type="text" maxlength="30" required>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </form>
+</div>
+
+<div class="row">
+    <div class="col-sm-offset-5 col-sm-10">
+        <button type="button" class="btn btn-sm btn-primary" onclick="submitHandler()"><i class="fa fa-check"></i>注 册 </button>&nbsp;
+    </div>
+</div>
+
+</body>
+</html>
